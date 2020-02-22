@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('top', 'TopController@add');
+Route::get('/', 'TopController@add');
 
 Route::get('profile', 'ProfileController@add');
 
@@ -25,3 +25,4 @@ Route::get('about', 'AboutController@add');
 Route::get('details', 'DetailsController@add');
 
 Route::get('contact', 'ContactController@add');
+Route::post('contact', 'ContactController@create');
