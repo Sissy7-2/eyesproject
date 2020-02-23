@@ -9,8 +9,13 @@ class ContactController extends Controller
 {
   // 以下を追記
   public function add()
-  {
-      return view('contact');
-  }
+   {
+      return view('create');
+   }
+  
+  public function create()
+   {
+        return redirect('create');
+   }
 
 }
