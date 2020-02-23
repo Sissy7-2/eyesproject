@@ -25,4 +25,4 @@ Route::get('about', 'AboutController@add');
 Route::get('details', 'DetailsController@add');
 
 Route::get('contact', 'ContactController@add');
-Route::post('contact', 'ContactController@create');
+// Route::post('contact/create', 'ContactController@create');
