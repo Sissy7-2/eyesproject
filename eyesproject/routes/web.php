@@ -27,3 +27,6 @@ Route::get('details', 'DetailsController@add');
 Route::get('contact', 'ContactsController@index');
 Route::post('contact/confirm', 'ContactsController@confirm');
 Route::post('contact/complete', 'ContactsController@complete');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

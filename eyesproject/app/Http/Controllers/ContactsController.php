@@ -14,48 +14,4 @@ class ContactsController extends Controller
  
         return view('contacts.index', compact('types', 'genders'));
     }
-    
-    public function complete(ContactRequest $request)
-{
-
-    $input = $request->except('action');
-     
-    if ($request->action === '戻る') {
-        return redirect()->action('ContactsController@index')->withInput($input);
-    }
- 
-    // チェックボックス（配列）を「,」区切りの文字列に
-    if (isset($request->type)) {
-        $request->merge(['type' => implode(', ', $request->type)]);
-    }
- 
-    // データを保存
-    Contact::create($request->all());
-    
-    // 送信メール
-    \Mail::send(new \App\Mail\Contact([
-        'to' => $request->email,
-        'to_name' => $request->name,
-        'from' => 'from@example.com',
-        'from_name' => 'MySite',
-        'subject' => 'お問い合わせありがとうございました。',
-        'type' => $request->type,
-        'gender' => $request->gender,
-        'body' => $request->body
-    ]));
- 
-    // 受信メール
-    \Mail::send(new \App\Mail\Contact([
-        'to' => 'from@example.com',
-        'to_name' => 'MySite',
-        'from' => $request->email,
-        'from_name' => $request->name,
-        'subject' => 'サイトからのお問い合わせ',
-        'type' => $request->type,
-        'gender' => $request->gender,
-        'body' => $request->body
-    ], 'from'));
-
-    return view('contacts.complete');
-    }
 }
