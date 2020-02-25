@@ -45,9 +45,7 @@ class ContactsController extends Controller
     Contact::create($request->all());
  
     // 二重送信防止
-    $request->session()->regenerateToken();
-    
-     // ...
+    // $request->session()->regenerateToken();
  
     // 送信メール
     \Mail::send(new \App\Mail\Contact([
