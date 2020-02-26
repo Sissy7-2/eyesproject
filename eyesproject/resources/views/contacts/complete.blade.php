@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">お問い合わせ</div>
                 <div class="panel-body">
-                    <p>ありがとうございます。</p>
+                    <p>ありがとうございます</p>
                      </div>
             </div>
         </div>

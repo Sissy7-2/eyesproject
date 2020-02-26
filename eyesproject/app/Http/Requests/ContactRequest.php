@@ -13,7 +13,7 @@ class ContactRequest extends FormRequest
     {
         return [
             'type' => 'required',
-            'type.*' => 'in:商品について,サービスについて,その他',
+            'type.*' => 'in:プロジェクトについて,疑問・質問,その他',
             'name' => 'required|max:10',
             'email' => 'required|email',
             'gender' => 'required|in:男,女',

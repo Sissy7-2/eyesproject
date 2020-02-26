@@ -9,7 +9,7 @@ class Contact extends Model
         'type', 'name', 'email', 'gender', 'body'
     ];
     static $types = [
-        '商品について', '質問など', 'その他'
+        'プロジェクトについて', '疑問・質問', 'その他'
     ];
     static $genders = [
         '男', '女'
