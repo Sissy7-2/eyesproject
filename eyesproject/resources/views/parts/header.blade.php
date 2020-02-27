@@ -4,7 +4,7 @@
 @section('content')
     <header class="container">
         <div class="row">
-            <p class="site-title">eye's project</p>
+            <h3 class="text-left">eye's project</h3>
             <nav>
                 <ul class="row">
                     <li><a href="#">profile</a></li>
